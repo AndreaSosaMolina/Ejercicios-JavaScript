@@ -15,16 +15,24 @@ const arrCities2 = [
 
   
 
-function inSpain(arr){
-    let newArr = [];
-     for(let i = 0; i < arr.length; i++){
-        if(arr[i].country === 'Spain' && arr[i].capital === false){
-          delete arr[i].capital
-          delete arr[i].country
-          arr[i].isSpain = true
-          newArr.push(arr[i])
-        }
-     }
-     return newArr;
-}
- console.log(inSpain(arrCities2))
+// function inSpain(arr){
+//     let newArr = [];
+//      for(let i = 0; i < arr.length; i++){
+//         if(arr[i].country === 'Spain' && arr[i].capital === false){
+//           delete arr[i].capital
+//           delete arr[i].country
+//           arr[i].isSpain = true
+//           newArr.push(arr[i])
+//         }
+//      }
+//      return newArr;
+// }
+//  console.log(inSpain(arrCities2))
+
+// Correccion:
+
+ console.log(
+
+  arrCities2.filter(c => !c.capital).map(x=>({city: x.city, isSpain: x.country === "Spain"}))
+
+)

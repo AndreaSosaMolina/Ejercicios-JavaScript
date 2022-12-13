@@ -10,13 +10,23 @@ const arrCities = [
     {city: 'Jaén', country: 'Spain', capital: false}
   ]
 
-  function getTheCountrys(arr){
-    let newArr = [];
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i].capital === false && arr[i].country === 'Spain'){
-           newArr.push(arr[i])
-        }
-    }
-    return newArr
+  // function getTheCountrys(arr){
+  //   let newArr = [];
+  //   for(let i = 0; i < arr.length; i++){
+  //       if(arr[i].capital === false && arr[i].country === 'Spain'){
+  //          newArr.push(arr[i])
+  //       }
+  //   }
+  //   return newArr
+  // }
+  // console.log(getTheCountrys(arrCities));
+
+  // Correccion:
+
+  function getTheCountrys2(arr){
+
+    return arrCities.filter(x=> x.country==="Spain" && !x.capital)
+
   }
-  console.log(getTheCountrys(arrCities));
+
+console.log(getTheCountrys2(arrCities))

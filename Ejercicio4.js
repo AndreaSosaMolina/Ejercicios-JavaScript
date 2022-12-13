@@ -5,12 +5,17 @@
     const arrNumber2 = [1,2,3,4,5];
     const arrNumber3 = [1,4,7,2];
 
-    let findTheNum = arrNumber1.filter(num =>  arrNumber2.includes(num))
-    let find2in3 = arrNumber2.filter(num => arrNumber3.includes(num))
+    // let findTheNum = arrNumber1.filter(num =>  arrNumber2.includes(num))
+    // let find2in3 = arrNumber2.filter(num => arrNumber3.includes(num))
+    // let findAll = findTheNum.filter(num => find2in3.includes(num))
 
-    let findAll = findTheNum.filter(num => find2in3.includes(num))
+    // console.log(findAll);
+    
+    // Correccion:
 
-    console.log(findAll);
+    let data = [arrNumber1, arrNumber2, arrNumber3];
+
+    console.log(data.reduce((a, b) => a.filter(c => b.includes(c))))
 
 
 

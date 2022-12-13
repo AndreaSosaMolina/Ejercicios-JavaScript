@@ -22,7 +22,7 @@ function returnFalsyValues(obj, type){
     
   })
 
-  return mainObj.filter((item)=> item !== undefined || item !== null )
+  return mainObj
 
 }
 

@@ -8,35 +8,44 @@
 // const roundedResult = roundTo(2.123, 2);
 // console.log(roundedResult); // 2.12
 
-function roundedNums(a, b){
+// function roundedNums(a, b){
 
-  const numbers = a.toString().split(".")
+//   const numbers = a.toString().split(".")
 
-  if(numbers[0] === undefined || numbers[1] === undefined){
-      return 0;
-  }
+//   if(numbers[0] === undefined || numbers[1] === undefined){
+//       return 0;
+//   }
 
-  const integerPart = parseInt(numbers[0]);
-  const decimalPart = numbers[1].split("");
+//   const integerPart = parseInt(numbers[0]);
+//   const decimalPart = numbers[1].split("");
 
-  let decimals = '';
+//   let decimals = '';
 
-  for(decimal of decimalPart){
-    if(!decimalPart.length){
-      break;
-    }
+//   for(decimal of decimalPart){
+//     if(!decimalPart.length){
+//       break;
+//     }
 
-    if(decimals.length < b){
-      decimals += decimal;
-    }
-  }
+//     if(decimals.length < b){
+//       decimals += decimal;
+//     }
+//   }
 
+//   let result = decimals.length ? `${integerPart}.${decimals}` : integerPart
+
+//   return parseFloat(result);
  
-  let result = decimals.length ? `${integerPart}.${decimals}` : integerPart
+// }
+// console.log(roundedNums(2.123,2))
 
-  return parseFloat(result);
- 
+function roundNumber(num, dec) {
+
+  let float = parseFloat(num);
+
+  let result = Math.round(float*Math.pow(10,dec))/Math.pow(10,dec);
+
+  return result;
+
 }
 
-
-console.log(roundedNums(2.123,2))
+console.log(roundNumber(2.13,2))
