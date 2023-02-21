@@ -14,10 +14,10 @@
   let units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
   let kilobytes = 1000;
 
-  if(bytes == 0) 
+  if(bytes === 0) 
     return '0 Bytes';
 
-  if(bytes == 1){
+  if(bytes === 1){
     return '1 Byte';
   }
 
